@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: summer-k8s-service
+  labels:
+    app.kubernetes.io/name: "summer-k8s-service"  
+spec:
+  type: ClusterIP
+  selector:
+    app: summer-k8s-app
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080

@@ -1,0 +1,19 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: summer-k8s-ing
+  annotations:
+    kubernetes.io/ingress.class: ambassador
+
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /demo/
+            pathType: Prefix
+            backend:
+              service: 
+                name: summer-k8s-service
+                port:
+                 number: 80
+              
