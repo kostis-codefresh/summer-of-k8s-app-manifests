@@ -2,10 +2,10 @@
 apiVersion: getambassador.io/v2
 kind:  Mapping
 metadata:
-  name:  summer-k8s-mapping-canary
+  name:  summer-k8s-mapping
 spec:
-  prefix: /canary/
-  service: summer-k8s-service-canary
+  prefix: /demo/
+  service: summer-k8s-service-stable
 ---
 apiVersion: getambassador.io/v2
 kind:  Mapping
@@ -21,4 +21,4 @@ metadata:
   name:  summer-k8s-mapping-unstable
 spec:
   prefix: /unstable/
-  service: summer-k8s-service-unstable  
+  service: summer-k8s-service-canary  
