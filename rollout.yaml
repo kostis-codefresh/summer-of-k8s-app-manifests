@@ -5,7 +5,7 @@ metadata:
   name: summer-k8s-rollout
 spec:
   revisionHistoryLimit: 1
-  replicas: 3
+  replicas: 10
   selector:
     matchLabels:
       app: summer-k8s-app
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: kostiscodefresh/summer-of-k8s-app:v3
+        image: kostiscodefresh/summer-of-k8s-app:v2
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
@@ -29,9 +29,9 @@ spec:
           mappings:
             - summer-k8s-mapping
       steps:
-      - setWeight: 33
+      - setWeight: 30
       - pause: {}
-      - setWeight: 50
+      - setWeight: 60
       - pause: {}
-      - setWeight: 80
+      - setWeight: 100
       - pause: {}     

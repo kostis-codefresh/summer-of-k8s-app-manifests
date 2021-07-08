@@ -6,6 +6,7 @@ metadata:
 spec:
   prefix: /demo/
   service: summer-k8s-service-stable
+  resolver: endpoint
 ---
 apiVersion: getambassador.io/v2
 kind:  Mapping
@@ -14,6 +15,7 @@ metadata:
 spec:
   prefix: /stable/
   service: summer-k8s-service-stable
+  resolver: endpoint
 ---
 apiVersion: getambassador.io/v2
 kind:  Mapping
@@ -21,4 +23,5 @@ metadata:
   name:  summer-k8s-mapping-unstable
 spec:
   prefix: /unstable/
-  service: summer-k8s-service-canary  
+  service: summer-k8s-service-canary
+  resolver: endpoint  
