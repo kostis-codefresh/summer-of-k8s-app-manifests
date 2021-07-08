@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: summer-k8s-deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: summer-k8s-app
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: kostiscodefresh/summer-of-k8s-app:main
+        image: kostiscodefresh/summer-of-k8s-app:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
