@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: kostiscodefresh/summer-of-k8s-app:v2
+        image: kostiscodefresh/summer-of-k8s-app:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
