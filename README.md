@@ -39,7 +39,9 @@ Visit the application at https://32.98.176.18/demo/
 
 Open a second terminal and watch the canary
 
+```
 kubectl-argo-rollouts watch summer-k8s-rollout -n demo
+```
 
 Edit file rollout.yaml
 and change line `kostiscodefresh/summer-of-k8s-app:v1` to `kostiscodefresh/summer-of-k8s-app:v2`
