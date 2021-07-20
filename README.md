@@ -40,7 +40,7 @@ Visit the application at https://32.98.176.18/demo/
 Open a second terminal and watch the canary
 
 ```
-kubectl-argo-rollouts watch summer-k8s-rollout -n demo
+kubectl argo rollouts get rollout summer-k8s-rollout -n demo -w
 ```
 
 Edit file rollout.yaml
