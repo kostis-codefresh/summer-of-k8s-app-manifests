@@ -5,7 +5,7 @@ for the [summer of K8s](https://www.getambassador.io/summer-of-k8s) Argo rollout
 
 The actual source code is at [https://github.com/kostis-codefresh/summer-of-k8s-app](https://github.com/kostis-codefresh/summer-of-k8s-app)
 
-## Prerequisite
+## Prerequisites
 
 1. Get access to a Kubernetes cluster
 2. Install Argo Rollouts following the [instructions](https://argoproj.github.io/argo-rollouts/installation/). Be sure to install the CLI as well
@@ -79,6 +79,13 @@ kubectl argo rollouts promote summer-k8s-rollout -n demo
 Now the old version is no longer present
 
 Submit your solution at [https://www.getambassador.io/summer-of-k8s/ship/week3/](https://www.getambassador.io/summer-of-k8s/ship/week3/)
+
+## Cleanup
+
+```
+kubectl delete -f . -n demo
+kubectl delete namespace demo
+```
 
 
 
